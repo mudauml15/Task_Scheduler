@@ -45,3 +45,51 @@ main {
   border-radius: 3px;
   cursor: pointer;
 }
+.card{
+  /* border: solid red; */
+  border-top:solid black ;
+  display: flex;
+  
+}
+.heading{
+  /* border: solid green ; */
+  font-size: 17px;
+  width: 200px;
+}
+.usertasks{
+  /* border: solid purple; */
+  font-size: 15px;
+  width: 200px;
+}
+.Priorities{
+  /* border: solid blue; */
+  width: 200px;
+}
+.deadline{
+  /* border: solid yellow; */
+  width: 200px;
+}
+.btnDel{
+  background: #007bff;
+  color: whitesmoke;
+  border: solid black;
+  font-size: 12px;
+  height: 20px;
+  width: 50px;
+  /* border-radius: 1px; */
+  margin-top: 53px;
+}
+.btnEdit{
+  background: #007bff;
+  color: whitesmoke;
+  border: solid black;
+  font-size: 12px;
+  height: 20px;
+  width: 50px;
+  /* border-radius: 1px; */
+  margin-top: 53px;
+  margin-left: 5px;
+}
+.delBtn{
+  border: solid gray;
+}

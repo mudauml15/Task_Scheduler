@@ -15,15 +15,15 @@
       <div class="task-form">
         <input type="text" id="task" placeholder="Enter task..." />
         <select id="priority">
-          <option value="top">Top Priority</option>
-          <option value="middle">Middle Priority</option>
-          <option value="low">Less Priority</option>
+          <option value="Top">Top Priority</option>
+          <option value="Middle">Middle Priority</option>
+          <option value="Low">Less Priority</option>
         </select>
         <input type="date" id="deadline" />
-        <button id="add-task" onclick="displayFn()" type="button">Add Task</button>
+        <button id="add-task" onclick="add()" type="button">Add Task</button>
       </div>
-      <div class="task-list" id="task-list">
-        <h1 id="display">...</h1>
+      <div class="task-list" id="display">
+        <!-- <h1 id="display">...</h1> -->
       </div>
       <script src="style.js"></script>
     </main>
