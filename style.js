@@ -19,7 +19,7 @@ let taskList = document.getElementById('display')
 let elements = "";
 data.forEach((d, index) => {
     elements += `
-    <div class="card">
+    <div class="card" id="card">
     <div class="heading">
     <h5> Task:
     </h5>
@@ -27,16 +27,19 @@ data.forEach((d, index) => {
     </div><br>
     <div class="Priorities">
     <h5>Priority:</h5>
-    <p>${d.priority}</p>
+    <p id="prior">${d.priority}</p>
     </div>
     <div class="deadline">
     <h5>Complete by:<h5>
     ${d.date}
     </div>
+    <h5 class="actionHeading"> Action: </h5>
     <button class="btnDel" onclick="removeTask(this)">Delete</button>
+    <h5 class="markHeading"> Mark Complete:</h5>
+    <input type="checkbox" id="completed" onclick="completedTask(this)">
     </div>
     `
-})
+ })
 taskList.innerHTML = elements;
 document.getElementById('task').value = ""
 document.getElementById('deadline').value = ""
@@ -48,7 +51,7 @@ function add(){
     let date = document.getElementById('deadline').value;
     
 
-    if (userTask == "" || userTask == " " || date == ""){
+    if (userTask == " " || userTask == " " || date == " "){
       alert('Please enter a task or date')
     } 
     else {
@@ -65,3 +68,10 @@ function removeTask(delTask) {
  localStorage.removeItem('items');
 
 }
+
+
+function completedTask() {
+document.getElementById('card').style.backgroundColor = "rgb(26, 233, 26)"
+}
+
+

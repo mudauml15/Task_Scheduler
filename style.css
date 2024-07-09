@@ -47,6 +47,7 @@ main {
 }
 .card{
   /* border: solid red; */
+  /* background-color: rgb(26, 233, 26); */
   border-top:solid black ;
   display: flex;
   
@@ -77,6 +78,7 @@ main {
   height: 20px;
   width: 50px;
   /* border-radius: 1px; */
+  margin-left: -48px;
   margin-top: 53px;
 }
 .btnEdit{
@@ -92,4 +94,15 @@ main {
 }
 .delBtn{
   border: solid gray;
+}
+.markHeading{
+  margin-left: 35px; 
+}
+.actionHeading{
+  margin-left: -50px;
+} 
+#completed {
+  margin-bottom: -20px;
+  margin-left: -60px;
+  text-decoration: line-through;
 }
