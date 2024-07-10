@@ -104,5 +104,22 @@ main {
 #completed {
   margin-bottom: -20px;
   margin-left: -60px;
-  text-decoration: line-through;
+}
+
+.card {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.priority-low {
+  background-color: #d3e0dc; /* Light blue */
+}
+
+.priority-medium {
+  background-color: #f4dada; /* Light red */
+}
+
+.priority-high {
+  background-color: #f8e9a1; /* Light yellow */
 }

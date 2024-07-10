@@ -15,14 +15,15 @@
       <div class="task-form">
         <input type="text" id="task" placeholder="Enter task..." />
         <select id="priority">
-          <option value="Top" >Top Priority</option>
-          <option value="Middle">Middle Priority</option>
-          <option value="Low">Less Priority</option>
+          <option value="Top" class="red">Top Priority</option>
+          <option value="Middle" class="green">Middle Priority</option>
+          <option value="Low" class="yellow">Less Priority</option>
         </select>
         <input type="date" id="deadline"  />
-        <button id="add-task" onclick="add(), colourChange(), colourChangeTwo()" type="button">Add Task</button>
+        <button id="add-task" onclick="add()" type="button">Add Task</button>
       </div>
       <div class="task-list" id="display">
+        </div>
         <!-- <h1 id="display">...</h1> -->
       </div>
       <script src="style.js"></script>

@@ -40,6 +40,7 @@ data.forEach((d, index) => {
     </div>
     `
  })
+
 taskList.innerHTML = elements;
 document.getElementById('task').value = ""
 document.getElementById('deadline').value = ""
@@ -49,17 +50,22 @@ function add(){
     let userTask = document.getElementById('task').value;
     let priority = document.getElementById('priority').value; 
     let date = document.getElementById('deadline').value;
-    
+    let isDuplicate = data.some(task => task.userTask === userTask && task.date === date);
 
+    
     if (userTask == " " || userTask == " " || date == " "){
       alert('Please enter a task or date')
     } 
+    else if (isDuplicate){
+        alert('This task already exists. Please enter a different task or date.');
+    }
     else {
        let newObject = {userTask, priority, date};
        data.push(newObject);
        localStorage.setItem('items', JSON.stringify(newObject));
        readAll();
     }
+    
 }
 
 function removeTask(delTask) {
@@ -69,9 +75,13 @@ function removeTask(delTask) {
 
 }
 
-
-function completedTask() {
-document.getElementById('card').style.backgroundColor = "rgb(26, 233, 26)"
+function completedTask(checkbox) {
+    let card = checkbox.parentElement;
+    if (checkbox.checked) {
+        card.style.backgroundColor = "rgb(26, 233, 26)";
+    } else {
+        card.style.backgroundColor = "";
+    }
 }
 
 
