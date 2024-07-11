@@ -4,10 +4,10 @@ let day = today.getDate();
 let month = today.getMonth()+1; 
 let year = today.getFullYear();
  if(day<10){
-        day='0'+day
+        day = '0' + day
     } 
     if(month<10){
-        month='0'+month
+        month = '0' + month
     } 
 
 today = year+'-'+month+'-'+day;
@@ -47,13 +47,13 @@ document.getElementById('deadline').value = ""
 }
 
 function add(){
-    let userTask = document.getElementById('task').value;
+    let userTask = document.getElementById('task').value.trim();
     let priority = document.getElementById('priority').value; 
     let date = document.getElementById('deadline').value;
     let isDuplicate = data.some(task => task.userTask === userTask && task.date === date);
 
     
-    if (userTask == " " || userTask == " " || date == " "){
+    if (userTask == "" || date == " "){
       alert('Please enter a task or date')
     } 
     else if (isDuplicate){
@@ -62,7 +62,7 @@ function add(){
     else {
        let newObject = {userTask, priority, date};
        data.push(newObject);
-       localStorage.setItem('items', JSON.stringify(newObject));
+       localStorage.setItem('items', JSON.stringify(data));
        readAll();
     }
     
